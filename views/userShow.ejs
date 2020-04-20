@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <style>
+        .label {
+            display: inline-block;
+            width: 6em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>User Details</h1>
+
+    <span><span class='label'>First Name:</span>
+    <%= user.fname %>
+        </span><br>
+
+        <span><span class='label'>Last Name:</span>
+        <%= user.lname %>
+            </span><br>
+            <span><span class='label'>Email:</span>
+            <%= user.email %>
+                </span><br>
+
+                <span><span class='label'>Thumbnail:</span>
+                <%= user.thubnail %>
+                    </span><br>
+
+                    <p>
+                        <a href="/users">Back</a>
+                        <a href="/users/<%= user.id %>/edit">Edit</a>
+                    </p>
+
+</body>
+
+</html>

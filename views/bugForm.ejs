@@ -1,0 +1,249 @@
+<% 
+  if (bug.id) {
+    submitLabel = "Submit Score";
+    route = `/bugs/${bug.id}`;
+  } else {
+    submitLabel = "Create bug";
+    route = "/bugs";
+  }
+%>
+<% if (bug.errors.length > 0) { %>
+<% console.log("Found errors"); console.log(bug.errors); %>
+<div>
+    <p>Errors:</p>
+    <ul>
+        <%- bug.errors.map((item) => `<li>${item}</li>` ).join("\n"); %>
+    </ul>
+</div>
+<% } %>
+
+
+
+
+<form action="<%=route%>" accept-charset="UTF-8" method="post">
+
+
+    <div class="input-list">
+        <label for="bug_user">1) Which one has the most movies?</label>
+        <select class="answer" name=bug[issue] id="Question 1">
+            <option value="0">BLANK</option>
+            <option value="1">Marvel Cinematic Universe</option>
+            <option value="2">DC Extended Universe</option>
+        </select>
+        
+        </select>
+    </div>
+
+    <div class="input-list">
+        <label for="bug_name">2) Who are the founding members of the Avengers in MCU?</label>
+        <select name=bug[issue] id="Question 2">
+            <option value="0">BLANK</option>
+            <option value="1">Iron Man, Thor, Hulk, Ant Man, and the Wasp</option>
+            <option value="2">Wolverine, Cyclops, Phoenix, Storm, Rogue, and Ice Man</option>
+            <option value="3">Iron Man, Captain America, Thor, Black Widow, Hulk, and Hawkeye</option>
+            <option value="4">Professor X, Magneto, Mystique, Beast, Havok, and Angel</option>
+        </select>
+    </div>
+
+    <div class="input-list">
+        <label for="bug_description ">3) What happened in the end of Batman v Superman: Dawn of Justice (2016)?</label>
+        <select name=bug[issue] id="Question 3">
+            <option value="0">BLANK</option>
+            <option value="1">The planet is attacked by Kryptonians</option>
+            <option value="2">Batman kills Superman</option>
+            <option value="3">Hint of Superman still being alive</option>
+            <option value="4">All of the above</option>
+        </select>
+    </div>
+
+    <div class="input-list">
+        <label for="bug_description ">4) What happened in the end of Captain America: Civil War (2016)?</label>
+        <select name=bug[issue] id="Question 4">
+            <option value="0">BLANK</option>
+            <option value="1">Pepper Potts is pregnant with Iron Man's child</option>
+            <option value="2">Winter Solider is killed by Iron Man</option>
+            <option value="3">Peter Parker exploring his new web shooters</option>
+            <option value="4">A bomb was sent to the Avengers' Headquarters</option>
+        </select>
+    </div>
+
+    <div class="input-list">
+        <label for="bug_description ">5) Who are the Marvel Cinematic Universe's Big 3?</label>
+        <select name=bug[issue] id="Question 5">
+            <option value="0">BLANK</option>
+            <option value="1">Spiderman, Captain America, Cyclops</option>
+            <option value="2">Wolverine, Iron Man, Professor X</option>
+            <option value="3">Iron Man, Captain America, Thor</option>
+            <option value="4">Spiderman, Hullk, Wolverine</option>
+        </select>
+    </div>
+
+    <div class="input-list">
+        <label for="bug_description ">6) Who are DC Extended Universe's Big 3?</label>
+        <select name=bug[issue] id="Question 6">
+            <option value="0">BLANK</option>
+            <option value="1">Superman, Green Lantern, Batman</option>
+            <option value="2">Superman, Batman, and Wonder Woman</option>
+            <option value="3">Superman, Green Arrow, Hawkgirl</option>
+            <option value="4">Batman, Wonder Woman, The Flash</option>
+        </select>
+    </div>
+
+    <div class="input-list">
+        <label for="bug_issue ">7) Which of these actors has NOT played Batman</label>
+        <select name=bug[issue] id="Question 7">
+            <option value="0">BLANK</option>
+            <option value="1">Michael Keaton</option>
+            <option value="2">George Clooney</option>
+            <option value="3">Oscar Isaac</option>
+            <option value="4">Robert Pattinson</option>
+        </select>
+    </div>
+
+    <div class="input-list">
+        <label for="bug_status ">8) Which of these actors has NOT played Spiderman?</label>
+        <select name=bug[status] id="Question 8">
+            <option value="0">BLANK</option>
+            <option value="1">Tobey Maguire</option>
+            <option value="2">Tom Holland</option>
+            <option value="3">KJ Apa</option>
+            <option value="4">Andrew Garfield</option>
+        </select>
+    </div>
+
+    <div class="input-list">
+        <label for="bug_priority ">9) Which two actors played Scott Summers?</label>
+        <select name=bug[priority] id="Question 9">
+            <option value="0">BLANK</option>
+            <option value="1">Hugh Jackman and Jake Abel</option>
+            <option value="2">James Marsen and Tye Sheridan</option>
+            <option value="3">Tom Cruise and Taylor Lautner</option>
+            <option value="4">Jake Gyllenhaal and Josh Hutcherson</option>
+        </select>
+    </div>
+
+    <div class="input-list">
+        <label for="bug_name">10) When was Black Widow original release date?</label>
+        <select name=bug[issue] id="Question 10">
+            <option value="0">BLANK</option>
+            <option value="1">November 6, 2020</option>
+            <option value="2">March 20, 2020</option>
+            <option value="3">May 27, 2019</option>
+            <option value="4">May 1, 2020</option>
+        </select>
+    </div>
+
+    <div class="input-list">
+        <label for="bug_description ">11) When was Wonder Woman 1984 original release date?</label>
+        <select name=bug[issue] id="Question 11">
+            <option value="0">BLANK</option>
+            <option value="1">June 5, 2020</option>
+            <option value="2">August 14, 2020</option>
+            <option value="3">December 13, 2019</option>
+            <option value="4">November 1, 2019</option>
+        </select>
+    </div>
+
+    <div class="input-list">
+        <label for="bug_description ">12) How many superheros were in Avengers: Endgame (2019)?</label>
+        <select name=bug[issue] id="Question 12">
+            <option value="0">BLANK</option>
+            <option value="1">1-10</option>
+            <option value="2">10-20</option>
+            <option value="3">30-40</option>
+            <option value="4">40+</option>
+        </select>
+    </div>
+
+    <div class="input-list">
+        <label for="bug_description ">13) Which superhero team appeared in Avengers: Endgame (2019)?</label>
+        <select name=bug[issue] id="Question 13">
+            <option value="0">BLANK</option>
+            <option value="1">X-Men</option>
+            <option value="2">Fantastic Four</option>
+            <option value="3">Guardians of the Galaxy</option>
+            <option value="4">The Runaways</option>
+        </select>
+    </div>
+
+    <div class="input-list">
+        <label for="bug_description ">14) How was Superman brought back to life in Justice League (2017)?</label>
+        <select name=bug[issue] id="Question 14">
+            <option value="0">BLANK</option>
+            <option value="1">With the Infinity Gauntlet</option>
+            <option value="2">Kryptonian Scout Ship</option>
+            <option value="3">Time Travel</option>
+            <option value="4">Genie's Lamp</option>
+        </select>
+    </div>
+
+    <div class="input-list">
+        <label for="bug_issue ">15) How many Robins has Batman had in the comics?</label>
+        <select name=bug[issue] id="Question 15">
+            <option value="0">BLANK</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+    </div>
+
+    <div class="input-list">
+        <label for="bug_status ">16) Which of these couples are NOT married?</label>
+        <select name=bug[status] id="Question 16">
+            <option value="0">BLANK</option>
+            <option value="1">Tony Stark and Pepper Potts</option>
+            <option value="2">Steve Rogers and Peggy Carter</option>
+            <option value="3">Scott Lang and Hope van Dyke</option>
+            <option value="4">Clint Barton and Laura Barton</option>
+        </select>
+    </div>
+
+    <div class="input-list">
+        <label for="bug_priority ">17) What happened to Batman's Parents?</label>
+        <select name=bug[priority] id="Question 17">
+            <option value="0">BLANK</option>
+            <option value="1">They were shot</option>
+            <option value="2">They're on vacation</option>
+            <option value="3">They abandoned him</option>
+            <option value="4">They're in hiding</option>
+        </select>
+
+        <div class="input-list">
+            <label for="bug_issue ">18) Who plays Captain Steve Trevor in DC Extended Universe?</label>
+            <select name=bug[issue] id="Question 18">
+                <option value="0">BLANK</option>
+                <option value="1">Chris Hemsworth</option>
+                <option value="2">Chris Evans</option>
+                <option value="3">Chris Pine</option>
+                <option value="4">Chris Pratt</option>
+            </select>
+        </div>
+
+        <div class="input-list">
+            <label for="bug_status ">19) Who plays Arthur Curry / Aquaman in Aquaman (2018)?</label>
+            <select name=bug[status] id="Question 19">
+                <option value="0">BLANK</option>
+                <option value="1">Jason Momoa</option>
+                <option value="2">Brad Pitt</option>
+                <option value="3">Leonardo Dicaprio</option>
+                <option value="4">Zac Efron</option>
+            </select>
+        </div>
+
+        <div class="input-list">
+            <label for="bug_priority ">20) Who is called the World's Greatest Hero in Spiderman: Far From Home
+                (2019)?</label>
+            <select name=bug[priority] id="Question 20">
+                <option value="0">BLANK</option>
+                <option value="1">Steve Rogers / Captain America</option>
+                <option value="2">Tony Stark / Iron Man</option>
+                <option value="3">Thor</option>
+                <option value="4">Wanda Maximoff / Scarlet Witch</option>
+            </select>
+        </div>
+
+        <div class="actions ">
+            <input type="submit" name="commit" value="<%= submitLabel %>" />
+        </div>
+</form>

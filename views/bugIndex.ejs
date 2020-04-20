@@ -1,0 +1,42 @@
+<html>
+
+<style>
+    h1 {
+        text-align: center;
+        margin-left: 3px;
+        font-size: 90px;
+    }
+
+    p {
+        margin-left: 440px;
+        font-size: 30px;
+    }
+
+    .number {
+        margin-left: 590px;
+        font-size: 30px;
+    }
+</style>
+
+
+<body>
+    <h1>How Well Do You Know Your Superheroes?</h1>
+
+    <p>Click on the quiz and finds out!</p>
+
+    </div>
+    <table>
+
+        <% bugs.forEach( (bug) => { %>
+        <tr>
+            
+
+            <td>
+                <a class="number" href="/bugs/<%= bug.id %>/edit">Start</a>
+            </td>
+            <% }) %>
+        </tr>
+    </table>
+</body>
+
+</html>
